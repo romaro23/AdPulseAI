@@ -32,7 +32,7 @@ async def seed_database():
 
     async with async_session_factory() as session:
         session.add_all(campaigns)
-        await session.commit()
+        await session.flush()
 
 
 async def main():

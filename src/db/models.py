@@ -145,7 +145,7 @@ class AdCreative(Base):
 class DailyAdMetric(Base):
     __tablename__ = 'daily_ad_metrics'
     __table_args__ = (
-        CheckConstraint("impressions >= 0", name="check_imressions_positive_or_zero"),
+        CheckConstraint("impressions >= 0", name="check_impressions_positive_or_zero"),
         CheckConstraint("clicks >= 0", name="check_clicks_positive_or_zero"),
         CheckConstraint("spend >= 0", name="check_spend_positive_or_zero"),
         CheckConstraint("clicks <= impressions", name="check_clicks_less_or_equal_than_impressions"),
